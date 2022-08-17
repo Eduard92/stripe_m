@@ -302,8 +302,7 @@ abstract class AbstractStripePayment extends JPayment
 				'customer_email'       => $this->get('custmail'),
 			  	'success_url'          => $this->get('notify_url'),
 			  	'cancel_url'           => $this->get('return_url'),
-			  	//'line_items'           => $items,
-			  	'product'           => $items,
+			  	'line_items'           => $items,
 			  	'payment_intent_data'  => $payment_intent_data
 			];
 		} else {
@@ -313,7 +312,7 @@ abstract class AbstractStripePayment extends JPayment
 				'payment_method_types' => ['card'],
 			  	'success_url'          => $this->get('notify_url'),
 			  	'cancel_url'           => $this->get('return_url'),
-			  	'product'           => $items,
+			  	'line_items'           => $items,
 			  	'payment_intent_data'  => $payment_intent_data
 			];
 		}
