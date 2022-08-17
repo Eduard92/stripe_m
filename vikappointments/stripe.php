@@ -127,7 +127,7 @@ class VikAppointmentsStripePayment extends AbstractStripePayment
 			'payment_method_types' => ['card'],
 		  	'success_url'          => $this->get('notify_url'),
 		  	'cancel_url'           => $this->get('return_url'),
-		  	'product'           => $items,
+		  	'line_items'           => $items,
 		  	'payment_intent_data'  => $payment_intent_data
 		]);
 
