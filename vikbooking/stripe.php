@@ -282,7 +282,7 @@ class VikBookingStripePayment extends AbstractStripePayment
 			[
 			'name'     => $this->get('transaction_name'),
 			'images'   => $images,
-			'amount'   => $amount_to_pay,
+			'unit_amount'   => $amount_to_pay,
 			'currency' => $this->getParam('currency'),
 			'quantity' => 1,
             ]
